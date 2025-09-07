@@ -1,0 +1,142 @@
+html{
+    margin-left:-20px;
+}
+body {
+    margin:0px;
+    background-color: rgb(222, 242, 250);
+    overflow-x: hidden;
+}
+.controlBar{
+    background-color: rgb(190, 232, 248);
+    position:sticky;
+    top:0;
+    height: 100px;
+    padding-left:50px;
+    padding-right:50px;
+    border:1px solid ;
+    border-color:black;
+    margin:0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    z-index: 1000;
+
+}
+.font{
+    font-family:Lucida Handwriting;
+    color:black;
+    display:flex;
+    align-items:center;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding:0;
+}
+li{
+    display:flex;
+    align-items: center;
+    padding:0 15px;
+    cursor:pointer;
+}
+li:hover {
+    background-color: rgb(127, 214, 248);
+    color: white;
+    
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+/*---------------------------------------------------------------*/
+.menu{
+    position: sticky;
+    top:103px;
+    z-index: 1000;
+    margin:0px;
+    padding:0 50px;
+    border-bottom:1px solid;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    
+}
+.image{
+    border-radius: 20px;
+
+}
+.slider {
+    display: flex;
+    position: relative;
+    width: 100vw;   /* full screen width */
+    height: 650px;  /* same height as images */
+    overflow: hidden;
+}
+
+.imgContainer{
+    background-color: white;
+    width:360px;
+    height:360px;
+    padding-top:10%;
+    padding-left:30%;
+    border:1px solid;
+    border-radius: 30px;
+    margin-right:20px ;;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    animation: slideLeft 10s linear infinite;
+
+}
+.imgContainer:hover{
+    transform:scale(1.04);
+    transition: transform 0.4s ease-in-out;
+}
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);  /* start off-screen left */
+    }
+    100% {
+        transform: translateX(-100%);  /* move to off-screen right */
+    }
+}
+/*---------------------------------------------------------------*/
+button{
+    position:relative;
+    border-radius: 100px;
+    padding:15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left:47.5%;
+    background-color:white;
+    color:black;
+    font-size: large;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover{
+    background-color: black;
+    color:white;
+}
+/*---------------------------------------------------------------*/
+
+img{
+  width: 450px;
+  height: 400px;
+  margin-left:100px;
+  margin-right:35px;
+  border-radius: 50px;
+  padding-bottom: 100px;
+  background-color:rgb(179, 230, 250);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+img:hover{
+    background-color: skyblue;
+}
+
+

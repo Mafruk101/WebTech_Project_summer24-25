@@ -1,0 +1,43 @@
+body{
+    background-color:rgb(222, 242, 250);
+}
+.container{
+    border: 0px;
+    border-radius: 70px;
+    margin-left:37%;
+    margin-right:37%;
+    margin-top:10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: center;
+    background-color: white;
+
+}
+.font{
+    font-size: xx-large;
+}
+#username,#password{
+    width: 80%;
+    border-radius:70px;
+    font-size: x-large;
+    padding :20px;
+}
+button{
+    border-radius: 100px;
+    padding-left:40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: x-large;
+    background-color: white;
+    color:black;
+}
+button:hover{
+    background-color: black;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    font-size:x-large
+}
