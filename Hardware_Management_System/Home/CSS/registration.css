@@ -12,6 +12,11 @@ body{
     text-align: center;
     background-color: white;
 }
+.container span{
+    display: block;
+    text-align: left;
+    margin-left:10%;
+}
 .font{
     font-size: xx-large;
 }
