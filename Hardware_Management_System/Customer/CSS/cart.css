@@ -1,0 +1,36 @@
+table{
+    margin: 20px auto;
+    border-collapse: collapse;
+    width:80%;
+    background: white;
+}
+th,td{
+    border: 1px solid;
+    padding: 12px;
+    text-align: center;
+}
+th{
+    background: #446c94;
+    color: white;
+}
+
+button{
+    border-radius: 100px;
+    padding-left:40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: x-large;
+    background-color: white;
+    color:black;
+    align-items: center;
+}
+button:hover{
+    background-color: black;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    font-size:large
+}
