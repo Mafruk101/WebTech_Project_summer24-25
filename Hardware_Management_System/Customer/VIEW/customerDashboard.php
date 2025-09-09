@@ -8,7 +8,7 @@
     <div class="controlBar">
         <h1 class="font" >Welcome</h1>
         <ul>
-            <li class="font">Settings</li>
+            <li class="font">Cart</li>
             <li class="font"><a href="../../Home/VIEW/loginPage.php">Logout</a></li>
         </ul>
     </div>

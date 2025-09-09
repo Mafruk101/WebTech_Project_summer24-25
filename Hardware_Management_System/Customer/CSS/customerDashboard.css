@@ -48,9 +48,11 @@ a{
 }
 /*--------------------------------------------------------------------*/
 .dashboardListContainer{
+    position:sticky;
     padding-left: 20px;
 }
 .dashboardListContainer ul{
+    position:sticky;
     display:block;
     width:250px;
     background-color: #446c94;
