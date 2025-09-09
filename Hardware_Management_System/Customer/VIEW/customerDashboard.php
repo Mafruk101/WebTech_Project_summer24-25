@@ -1,5 +1,37 @@
 <?php
 include "../../dbConnection.php";
+
+if($_SERVER["REQUEST_METHOD"]=="POST"&& isset($_POST['product_id'])){
+    $product_id=intval($_POST['product_id']);
+    $sql="SELECT productName, Price FROM product WHERE pid=$product_id";
+    $result =$conn->query($sql);
+    if($result->num_rows>0){
+        $product=$result->fetch_assoc();
+        $productName=$product['productName'];
+        $productPrice=$product['Price'];
+
+        $check_sql="SELECT * FROM cart WHERE pId=$product_id";
+        $check_result=$conn->query($check_sql);
+        if($check_result->num_rows>0){
+            $update_sql="UPDATE cart SET pQuantity=pQuantity+1,pTotalPrice=pQuantity*pPrice WHERE pId=$product_id";
+            $conn->query($update_sql);
+            echo "<script>alert('item updated successfully');</script>";
+        }
+        else{
+            $pQuantity=1;
+            $pTotalPrice=$pQuantity*$productPrice;
+            $insert_sql="INSERT INTO cart (pName,pQuantity,pPrice,pTotalPrice,pId) VALUES ('$productName','$pQuantity','$productPrice','$pTotalPrice','$product_id')";
+            $conn->query($insert_sql);
+            echo "<script>alert('item added successfully');</script>";
+            
+        }
+    }
+
+}
+
+
+?>
+<?php
 $sql = "SELECT * FROM product";
 $result = $conn->query($sql);
 ?>
@@ -13,7 +45,7 @@ $result = $conn->query($sql);
     <div class="controlBar">
         <h1 class="font">Welcome</h1>
         <ul>
-            <li class="font">Cart</li>
+            <li class="font"><a href="cart.php">Cart</a></li>
             <li class="font"><a href="../../Home/VIEW/loginPage.php">Logout</a></li>
         </ul>
     </div>
@@ -37,7 +69,7 @@ $result = $conn->query($sql);
                     <img src='../../images/".$row['Image']."' alt='".$row['productName']."'>
                     <h3>".$row['productName']."</h3>
                     <p><b>$".$row['Price']."</b></p>
-                    <form method='post' action='cart.php'>
+                    <form method='post' action=''>
                         <input type='hidden' name='product_id' value='".$row['pid']."'>
                         <button type='submit'>Add to Cart</button>
                     </form>
