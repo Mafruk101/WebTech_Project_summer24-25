@@ -46,6 +46,37 @@ a{
     text-decoration: none;
     color:inherit;
 }
+.searchContainer{
+    display: flex;
+    gap:20px;
+}
+.searchbar{
+    border-radius: 50px;
+    height: 48px;
+    width: 800px;
+    padding:0 15px;
+    font-size: 20px;
+    align-self: center;
+    margin:0px;
+    
+}
+
+.button{
+    border-radius: 100px;
+    padding-left:40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: large;
+    background-color: white;
+    color:black;
+    align-self: center;
+}
+.button:hover{
+    background-color: black;
+    color:white;
+}
+
 /*--------------------------------------------------------------------*/
 .dashboardListContainer{
     position:sticky;

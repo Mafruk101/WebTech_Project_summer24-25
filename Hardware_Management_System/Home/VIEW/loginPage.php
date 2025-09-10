@@ -1,5 +1,7 @@
 <?php
+session_start();
 include "../../dbConnection.php";
+
 
 $usernameError=$passwordError="";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -18,8 +20,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $result=$conn->query($sql);
         if($result->num_rows==1){
             $row = $result->fetch_assoc();
+    
+            $_SESSION['customer_id']=$row['id'];
+            $_SESSION['customer_name']=$row['realname'];
             if($password==$row["password"]){
                 header("Location: ../../Customer/VIEW/customerDashboard.php");
+                $conn->query("DELETE FROM cart");
+                
                 exit;
             }
             else{

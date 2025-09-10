@@ -1,9 +1,32 @@
 <?php
+session_start();
 include "../../dbConnection.php";
+if(!isset($_SESSION['customer_id'])){
+    header("Location:../../Home/VIEW/loginPage.php");
+    exit;
+}
+
+$customerId=$_SESSION['customer_id'];
+$customerName=$_SESSION['customer_name'];
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_POST['clear_cart'])){
         $conn->query("DELETE FROM cart");
         echo"<script>alert('Cart cleared successfully');</script>";
+    }
+    if(isset($_POST['confirm_order'])){
+        $grandTotalSql="SELECT SUM(pTotalPrice) AS grand_total FROM cart";
+        $grandTotal_result=$conn->query($grandTotalSql);
+        $grand_total=0;
+        if($grandTotal_result&& $row=$grandTotal_result->fetch_assoc()){
+            $grand_total=$row ['grand_total'];
+        }
+        if($grand_total>0){
+            $conn->query("INSERT INTO orders (CustomerId, CustomerName, GrandTotal) VALUES ('$customerId','$customerName',$grand_total)");
+            $conn->query("DELETE FROM cart");
+            echo"<script>alert('order confirmed successfully')</script>";
+        }
+
+        
     }
     
 }
