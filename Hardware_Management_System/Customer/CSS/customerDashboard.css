@@ -49,6 +49,7 @@ a{
 .searchContainer{
     display: flex;
     gap:20px;
+    align-items: center;
 }
 .searchbar{
     border-radius: 50px;
@@ -106,6 +107,7 @@ a{
 .mainContainer {
     display: flex;       /* makes sidebar + products horizontal */
     align-items: flex-start; /* aligns items at the top */
+    border: 1px solid;
 }
 .productsContainer {
     display: flex;
