@@ -1,0 +1,71 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+    }
+
+    .container {
+      width: 95%;
+      margin: 30px auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e293b;
+    }
+
+    /* User Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    table th, table td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    table tr:hover {
+      background: #f9fafb;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    .active { background: #16a34a; color: #fff; }
+    .inactive { background: #dc2626; color: #fff; }
+
+    .actions button, .actions select {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      margin: 3px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .edit-btn { background: #2563eb; color: #fff; }
+    .delete-btn { background: #dc2626; color: #fff; }
+    .toggle-btn { background: #1e293b; color: #fff; }
+
+    .edit-btn:hover { background: #1e40af; }
+    .delete-btn:hover { background: #991b1b; }
+    .toggle-btn:hover { background: #334155; }
+
+    select {
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
