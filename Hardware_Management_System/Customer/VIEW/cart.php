@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     </script>
 </head>
 <body>
-    <h1 style="text-align:center;">My Cart</h1>
+    <h1 style="text-align:center; font-family:Lucida Handwriting;">My Cart</h1>
     <form method="post">
     <table>
         <tr>

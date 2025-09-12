@@ -49,8 +49,8 @@ a{
 .container{
     border:0px;
     border-radius: 70px;
-    margin-left:30%;
-    margin-right:30%;
+    margin-left:35%;
+    margin-right:35%;
     margin-top:5%;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -65,11 +65,18 @@ a{
 .font{
     font-size: xx-large;
 }
-#realname,#username,#email,#phone,#password,#reEnterPassword{
-    width: 80%;
+#ProductId,#ProductName{
+    width: 50%;
     border-radius:70px;
     font-size: x-large;
     padding :20px;
+}
+#Issue{
+    border-radius:30px;
+    font-size: x-large;
+    padding:20px;
+    width:70%;
+    height: 300px;
 }
 .font{
     font-family:Lucida Handwriting;
@@ -98,4 +105,19 @@ a{
 }
 label{
     font-size: x-large;
+}
+table{
+    margin: 20px auto;
+    border-collapse: collapse;
+    width:80%;
+    background: white;
+}
+th,td{
+    border: 1px solid;
+    padding: 12px;
+    text-align: center;
+}
+th{
+    background: #446c94;
+    color: white;
 }

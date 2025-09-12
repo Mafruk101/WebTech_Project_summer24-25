@@ -22,14 +22,14 @@ $result=$conn->query($sql);
     <div class="controlBar">
         <h1 class="font">View order history</h1>
         <form method="GET" class="searchContainer" >
-            <input type="text" name="search" class="searchbar" placeholder="Search by name" value="<?php echo htmlspecialchars($searchQuery); ?>">
+            <input type="text" name="search" class="searchbar" placeholder="Search by id or name" value="<?php echo htmlspecialchars($searchQuery); ?>">
             <input type="submit" class="button" value="Search">
         </form>
-        <ul>
-            <li class="font"><a href="customerDashboard.php">Go back</a></li>
+        <ul style="font-size: 25px">
+            <li class="font"><a href="customerDashboard.php">Back</a></li>
         </ul>
     </div>
-    <h1 style="text-align:center;">History</h1>
+    <h1 style="text-align:center;font-family:Lucida Handwriting;">Purchase History</h1>
     <form>
         <table>
             <tr>

@@ -83,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <body>
         <div class="container">
 
-        <h1>Customer Registration</h1>
+        <h1 style="font-family:Lucida Handwriting">Customer Registration</h1>
 
         <form method="post">
             <input type="text" id="fullname" name="realname" placeholder="Enter your name"><br>

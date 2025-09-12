@@ -1,15 +1,23 @@
 <?php
 include "../../dbConnection.php";
+session_start();
+if(!isset($_SESSION['customer_id'])){
+    header("Location:../../Home/VIEW/loginPage.php");
+    exit;
+}
+
+$customerId=$_SESSION['customer_id'];
+$customerName=$_SESSION['customer_name'];
 
 if($_SERVER["REQUEST_METHOD"]=="POST"&& isset($_POST['product_id'])){
     $product_id=intval($_POST['product_id']);
     $sql="SELECT productName, Price, Quantity FROM product WHERE pid=$product_id";
     $result =$conn->query($sql);
     if($result->num_rows>0){
-        $product=$result->fetch_assoc();
-        $productName=$product['productName'];
-        $productPrice=$product['Price'];
-        $mainQuantity=$product['Quantity'];
+        $row=$result->fetch_assoc();
+        $productName=$row['productName'];
+        $productPrice=$row['Price'];
+        $mainQuantity=$row['Quantity'];
 
         $check_sql="SELECT * FROM cart WHERE pId=$product_id";
         $check_result=$conn->query($check_sql);
@@ -63,12 +71,12 @@ $result = $conn->query($sql);
 </head>
 <body>
     <div class="controlBar">
-        <h1 class="font">Welcome</h1>
+        <h1 class="font">Welcome <?php echo $customerName ?></h1>
         <form method="GET" class="searchContainer" >
             <input type="text" name="search" class="searchbar" placeholder="Search by name" value="<?php echo htmlspecialchars($searchQuery); ?>">
             <input type="submit" class="button" value="Search">
         </form>
-        <ul>
+        <ul style="font-size: 25px">
             <li class="font"><a href="cart.php">Cart</a></li>
             <li class="font"><a href="../../Home/VIEW/loginPage.php">Logout</a></li>
         </ul>
@@ -77,9 +85,9 @@ $result = $conn->query($sql);
     <div class="dashboardListContainer">
         <ul>
             <li>Shop</li>
-            <li>Profile</li>
+            <li><a href="profile.php">Profile</a></li>
             <li><a href="history.php">History</a></li>
-            <li>Repair</li>
+            <li><a href="repairReq.php">Repair</a></li>
             <li>Feedback</li>
             <li>Rate us</li>
         </ul>
