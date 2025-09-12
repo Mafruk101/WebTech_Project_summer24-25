@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
   <title>Computer Shop Admin Panel</title>
 
 </head>
 <body>
 
-<link rel="stylesheet" href="AdminDashboard.css">
+<link rel="stylesheet" href="../CSS/AdminDashboard.css">
 
   <!-- Sidebar -->
   <div class="sidebar">

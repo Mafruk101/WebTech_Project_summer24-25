@@ -4,81 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manage Orders - Admin Panel</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f1f5f9;
-    }
 
-    .container {
-      width: 95%;
-      margin: 30px auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #1e293b;
-    }
-
-    /* Orders Table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    table th, table td {
-      padding: 12px 15px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    table th {
-      background: #1e293b;
-      color: #fff;
-    }
-
-    table tr:hover {
-      background: #f9fafb;
-    }
-
-    .status {
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 6px;
-    }
-
-    .pending { background: #facc15; color: #1e293b; }
-    .shipped { background: #3b82f6; color: #fff; }
-    .delivered { background: #16a34a; color: #fff; }
-    .cancelled { background: #dc2626; color: #fff; }
-
-    .actions button, .actions select {
-      padding: 6px 10px;
-      border: none;
-      border-radius: 5px;
-      margin: 3px;
-      cursor: pointer;
-      font-size: 13px;
-    }
-
-    .view-btn { background: #2563eb; color: #fff; }
-    .delete-btn { background: #dc2626; color: #fff; }
-    .update-btn { background: #1e293b; color: #fff; }
-
-    .view-btn:hover { background: #1e40af; }
-    .delete-btn:hover { background: #991b1b; }
-    .update-btn:hover { background: #334155; }
-
-    select {
-      border: 1px solid #ccc;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="../CSS/ManageCategory.css">
 </head>
 <body>
 
