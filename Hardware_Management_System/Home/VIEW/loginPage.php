@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 exit;
             }
             else{
-                $passwordError="Invalid password";
+                $passwordError="invalid password";
             }
             
         }
@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     </head>
     <body>
         <div class ="container" >
-            <h1>Login</h1><br>
+            <h1 style="font-family:Lucida Handwriting">Login</h1><br>
             <form  method="post"> 
                 <input type="text" id="username" name="username" placeholder="username"><br>
                 <span style="color:red; font-size:20px"><?php echo $usernameError; ?></span>

@@ -28,10 +28,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     </div>
 
     <div class="container" style="padding:20px;">
-        <?php if (!empty($message)) echo "<p style='color:green;'>$message</p>"; ?>
 
         <form method="POST">
-            <h1>Repair request</h1>
+            <h1 style="font-family:Lucida Handwriting">Repair request</h1>
             <label>Product Id:</label>
             <input type="text" id="ProductId" name="ProductId" placeholder="Product  Id"><br><br>
             <label>Product Name</label>

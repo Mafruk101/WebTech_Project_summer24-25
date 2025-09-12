@@ -51,7 +51,7 @@ else{
 </head>
 <body>
      <div class="controlBar">
-        <h1 class="font">My Profile</h1>
+        <h1 class="font" style="font-family:Lucida Handwriting">My Profile</h1>
         <ul>
             <li class="font"><a href="customerDashboard.php">Dashboard</a></li>
             <li class="font"><a href="../../Home/VIEW/loginPage.php">Logout</a></li>
