@@ -77,9 +77,9 @@ $result = $conn->query($sql);
     <div class="dashboardListContainer">
         <ul>
             <li>Shop</li>
-            <li>Profile</li>
+            <li><a href="profile.php">Profile</a></li>
             <li><a href="history.php">History</a></li>
-            <li>Repair</li>
+            <li><a href="repairReq.php">Repair</a></li>
             <li>Feedback</li>
             <li>Rate us</li>
         </ul>
