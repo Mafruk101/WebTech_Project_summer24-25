@@ -1,5 +1,6 @@
 html{
     margin-left:-20px;
+    scroll-behavior:smooth;
 }
 body {
     margin:0px;
@@ -124,19 +125,64 @@ button:hover{
 }
 /*---------------------------------------------------------------*/
 
-img{
-  width: 450px;
-  height: 400px;
-  margin-left:100px;
-  margin-right:35px;
-  border-radius: 50px;
-  padding-bottom: 100px;
-  background-color:rgb(179, 230, 250);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+.mainContainer {
+    display: flex;       /* makes sidebar + products horizontal */
+    align-items: flex-start; /* aligns items at the top */
+    border: 1px solid;
 }
-img:hover{
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px; /* so it doesn’t overlap sidebar */
+    margin-right: 50px;
+    padding: 20px;
+    border: 0px solid;
+    font-size: x-large;
+}
+.productCard {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    margin: 50px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(3, 30, 80, 0.1);
+}
+.productCard img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.productCard button {
+    background: #14ce03;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.productCard button:hover {
+     background: #01410a;
+}
+/*------------------------------------------------*/
+.footer{
+    padding-top:50px;
+    padding-left: 150px;
+    height:450px;
+    border: 0px;
+    margin: 0px;
     background-color: skyblue;
+    display: flex;
+    font-family:Lucida Handwriting;
+    
+
 }
+.copyright{
+    background-color: skyblue;
+    font-family:Lucida Handwriting;
+    padding-bottom: 20px;
 
-
+}
