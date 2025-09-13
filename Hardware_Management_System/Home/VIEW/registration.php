@@ -98,15 +98,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
             <span style="color:red; font-size:20px"><?php echo $phoneErr;?></span>
             <br><br>
-            <input type="password" id="password" name="password" placeholder="Enter a password"><br>
+            <input type="text" id="password" name="password" placeholder="Enter a password"><br>
             <span style="color:red; font-size:20px"><?php echo $passwordErr;?></span>
             <br><br>
-            <input type="password" id="reEnterPassword" name="repassword" placeholder="Re-enter the password"><br>
+            <input type="text" id="reEnterPassword" name="repassword" placeholder="Re-enter the password"><br>
             <span style="color:red; font-size:20px"><?php echo $repasswordErr;?></span>
             <br>
-            <label class="font">
-            <input type="checkbox" id="showPassword" name="showPassword">Show password
-            </label>
             <br><br>
             <button type="submit">Register</button><br><br>
             <a href="loginPage.php">Back</a>

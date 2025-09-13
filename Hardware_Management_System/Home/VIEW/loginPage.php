@@ -57,10 +57,25 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                 <input type="password" id="password" name="password" placeholder="password"><br>
                 <span style="color:red; font-size:20px"><?php echo $passwordError; ?></span>
                 <br><br>
-                <button type="submit">Submit</button>
+                <label class="font">
+                <input type="checkbox" id="showPassword" onclick="togglePassword()"name="showPassword">Show password
+                </label>
+                <br><br>
+                <button type="submit">Sign in</button>
             </form>
+            <script>
+                function togglePassword(){
+                    const inputPassword = document.getElementById("password");
+                    if(inputPassword.type ==="password"){
+                        inputPassword.type="text";
+                    }
+                    else{
+                        inputPassword.type="password";
+                    }
+                }
+            </script>
             <br>
-            <a href="">Forgot password?</a> <br>
+            <a href="forgotPassword.php">Forgot password?</a> <br>
             <a href="registration.php">Don't have any account?</a>
             <br><br>
             <a href="homePage.php">Home</a>
